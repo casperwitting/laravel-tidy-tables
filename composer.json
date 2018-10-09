@@ -1,0 +1,44 @@
+{
+    "name": "casperw/laraveltidytables",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Casper Witting",
+            "email": "casper.witting@gmail.com",
+            "homepage": "http://casperwitting.nl/"
+        }
+    ],
+    "homepage": "https://github.com/casperw/laraveltidytables",
+    "keywords": ["Laravel", "LaravelTidyTables"],
+    "require": {
+        "illuminate/support": "~5",
+        "doctrine/dbal": "^2.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Casperw\\LaravelTidyTables\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Casperw\\LaravelTidyTables\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Casperw\\LaravelTidyTables\\LaravelTidyTablesServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTidyTables": "Casperw\\LaravelTidyTables\\Facades\\LaravelTidyTables"
+            }
+        }
+    }
+}
