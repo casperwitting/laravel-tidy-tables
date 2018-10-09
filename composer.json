@@ -1,6 +1,6 @@
 {
     "name": "casperw/laraveltidytables",
-    "description": ":description",
+    "description": "Structures your database columns nice and tidy.",
     "license": "MIT",
     "authors": [
         {
