@@ -48,21 +48,6 @@ class LaravelTidyTablesServiceProvider extends MigrationServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laraveltidytables.php', 'laraveltidytables');
-
-        // Register the service the package provides.
-        $this->app->singleton('laraveltidytables', function ($app) {
-            return new LaravelTidyTables; // TODO: Dit weghalen?.
-        });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['laraveltidytables']; // TODO: Dit weghalen?.
     }
     
     /**
