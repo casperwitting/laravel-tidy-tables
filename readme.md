@@ -15,7 +15,16 @@ Via Composer
 $ composer require casperw/laraveltidytables
 ```
 
+``` bash
+$ php artisan vendor:publish --tag=laraveltidytables.config
+```
+
 ## Usage
+The following command will sort all of your database's tables. 
+``` bash
+$ php artisan migrate --tidy
+```
+
 
 ## Change log
 
