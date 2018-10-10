@@ -2,8 +2,9 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+[![StyleCI](https://styleci.io/repos/152297096/shield?branch=master)](https://styleci.io/repos/152297096)
 
 This package provides a way to reorder the columns of all your existing database tables. The sorting algorithm will sort table columns in the following structure:
 
@@ -100,5 +101,4 @@ MIT. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/casperw/laravel-tidy-tables
 [link-downloads]: https://packagist.org/packages/casperw/laravel-tidy-tables
 [link-travis]: https://travis-ci.org/casperw/laravel-tidy-tables
-[link-styleci]: https://github.styleci.io/repos/152297096
 [link-author]: https://github.com/casperw
