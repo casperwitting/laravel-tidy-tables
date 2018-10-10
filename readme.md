@@ -68,7 +68,7 @@ The configuration file contains an array of fields, and an array of data types.
     */
     'data_types' => [
         'universally_unique_identifier' => 'CHAR(36)',
-        'foreign_keys' => 'INTEGER',
+        'foreign_keys' => 'INTEGER UNSIGNED',
         'timestamps' => 'TIMESTAMP NULL'
     ]
 ```
