@@ -100,5 +100,5 @@ MIT. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/casperw/laravel-tidy-tables
 [link-downloads]: https://packagist.org/packages/casperw/laravel-tidy-tables
 [link-travis]: https://travis-ci.org/casperw/laravel-tidy-tables
-[link-styleci]: https://styleci.io/repos/12345678
+[link-styleci]: https://styleci.io/repos/152297096
 [link-author]: https://github.com/casperw
