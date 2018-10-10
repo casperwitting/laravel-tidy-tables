@@ -40,5 +40,7 @@
                 "LaravelTidyTables": "Casperw\\LaravelTidyTables\\Facades\\LaravelTidyTables"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
