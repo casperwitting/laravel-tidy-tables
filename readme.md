@@ -29,6 +29,7 @@ The configuration file contains an array of fields, and an array of data types.
 
 #### Available fields
 ```php
+    /*
     |--------------------------------------------------------------------------
     | Fields
     |--------------------------------------------------------------------------
@@ -55,6 +56,7 @@ The configuration file contains an array of fields, and an array of data types.
 > **Note:** By default, the configuration supports laravel's default datatypes. Check if your database corrosponds with the default values, and change them if needed!
 
 ```php
+    /*
     |--------------------------------------------------------------------------
     | Data types
     |--------------------------------------------------------------------------
