@@ -1,5 +1,5 @@
 {
-    "name": "casperw/laraveltidytables",
+    "name": "casperw/laravel-tidy-tables",
     "description": "Structures your database columns nice and tidy.",
     "license": "MIT",
     "authors": [
@@ -9,8 +9,8 @@
             "homepage": "http://casperwitting.nl/"
         }
     ],
-    "homepage": "https://github.com/casperw/laraveltidytables",
-    "keywords": ["Laravel", "LaravelTidyTables"],
+    "homepage": "https://github.com/casperw/laravel-tidy-tables",
+    "keywords": ["Laravel", "LaravelTidyTables", "table", "sorting", "structure", "column"],
     "require": {
         "illuminate/support": "~5",
         "doctrine/dbal": "^2.8"
@@ -35,10 +35,7 @@
         "laravel": {
             "providers": [
                 "Casperw\\LaravelTidyTables\\LaravelTidyTablesServiceProvider"
-            ],
-            "aliases": {
-                "LaravelTidyTables": "Casperw\\LaravelTidyTables\\Facades\\LaravelTidyTables"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
