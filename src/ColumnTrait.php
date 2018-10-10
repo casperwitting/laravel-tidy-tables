@@ -21,7 +21,7 @@ trait ColumnTrait
         $columns_reversed = $columns->reverse();
 
         foreach ($columns_reversed as $column) {
-            if (!in_array($column, config('laraveltidytables.fields.timestamps'))) {
+            if (! in_array($column, config('laraveltidytables.fields.timestamps'))) {
                 return $column;
             }
         }

@@ -2,10 +2,10 @@
 
 namespace Casperw\LaravelTidyTables;
 
-use Casperw\LaravelTidyTables\Commands\TidyTableCommand;
-use Illuminate\Database\ConnectionResolverInterface;
-use Illuminate\Database\Migrations\MigrationRepositoryInterface;
 use Illuminate\Database\MigrationServiceProvider;
+use Illuminate\Database\ConnectionResolverInterface;
+use Casperw\LaravelTidyTables\Commands\TidyTableCommand;
+use Illuminate\Database\Migrations\MigrationRepositoryInterface;
 
 class LaravelTidyTablesServiceProvider extends MigrationServiceProvider
 {
@@ -49,7 +49,7 @@ class LaravelTidyTablesServiceProvider extends MigrationServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laraveltidytables.php', 'laraveltidytables');
     }
-    
+
     /**
      * Console-specific booting.
      *
