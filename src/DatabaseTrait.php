@@ -19,7 +19,7 @@ trait DatabaseTrait
 
     public function moveKey(string $table, string $column, string $data_type, string $after_column)
     {
-        return DB::statement("ALTER TABLE `{$table}` MODIFY COLUMN `{$column}` {$data_type} UNSIGNED AFTER `{$after_column}`");
+        return DB::statement("ALTER TABLE `{$table}` MODIFY COLUMN `{$column}` {$data_type} AFTER `{$after_column}`");
     }
 
     public function moveColumn(string $table, string $column, string $data_type, string $after_column)

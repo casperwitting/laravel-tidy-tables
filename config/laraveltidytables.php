@@ -35,7 +35,7 @@ return [
     */
     'data_types' => [
         'universally_unique_identifier' => 'CHAR(36)',
-        'foreign_keys' => 'INTEGER',
+        'foreign_keys' => 'INTEGER UNSIGNED',
         'timestamps' => 'TIMESTAMP NULL'
     ]
 
