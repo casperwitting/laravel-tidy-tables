@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
 This package provides a way to reorder the columns of all your existing database tables. The sorting algorithm will sort table columns in the following structure:
@@ -12,6 +11,12 @@ This package provides a way to reorder the columns of all your existing database
 - Foreign keys
 - Native columns
 - Timestamps
+
+## Example
+
+To give you an example, I've created a 'products' table. You might recognise the situation on the left, where the table messy and unstructured. The table on the right shows how the columns are grouped after running the tidy command. 
+ 
+![Alt text](tidy-tables.jpg?raw=true "Tidy example")
 
 ## Installation
 
