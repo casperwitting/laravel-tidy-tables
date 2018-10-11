@@ -38,5 +38,4 @@ trait DatabaseTrait
         Schema::enableForeignKeyConstraints();
         config('database.connections.mysql.strict', true);
     }
-
 }

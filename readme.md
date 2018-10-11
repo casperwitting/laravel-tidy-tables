@@ -2,7 +2,8 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![StyleCI][ico-styleci]][link-styleci]
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![StyleCI](https://styleci.io/repos/152297096/shield?branch=master)](https://styleci.io/repos/152297096)
 
 This package provides a way to reorder the columns of all your existing database tables. The sorting algorithm will sort table columns in the following structure:
 
@@ -14,7 +15,9 @@ This package provides a way to reorder the columns of all your existing database
 
 ## Example
 
-To give you an example, I've created a 'products' table. You might recognise the situation on the left, where the table messy and unstructured. The table on the right shows how the columns are grouped after running the tidy command. 
+To give you an example, I've created a 'products' table. You might recognise the situation on the left, where the table became messy and unstructured. 
+
+The table on the right shows how the columns are grouped after running the tidy command. 
  
 ![Alt text](tidy-tables.jpg?raw=true "Tidy example")
 
@@ -105,5 +108,4 @@ MIT. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/casperw/laravel-tidy-tables
 [link-downloads]: https://packagist.org/packages/casperw/laravel-tidy-tables
 [link-travis]: https://travis-ci.org/casperw/laravel-tidy-tables
-[link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/casperw

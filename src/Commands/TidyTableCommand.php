@@ -2,11 +2,11 @@
 
 namespace Casperw\LaravelTidyTables\Commands;
 
+use Illuminate\Support\Collection;
 use Casperw\LaravelTidyTables\ColumnTrait;
 use Casperw\LaravelTidyTables\DatabaseTrait;
 use Illuminate\Database\Migrations\Migrator;
 use Illuminate\Database\Console\Migrations\MigrateCommand as BaseMigrateCommand;
-use Illuminate\Support\Collection;
 
 class TidyTableCommand extends BaseMigrateCommand
 {
@@ -19,9 +19,9 @@ class TidyTableCommand extends BaseMigrateCommand
      */
     public function __construct(Migrator $migrator)
     {
-        $this->signature .= "
+        $this->signature .= '
                 {--tidy : Move timestamps columns to the end of all tables.}
-        ";
+        ';
 
         parent::__construct($migrator);
     }
@@ -85,7 +85,7 @@ class TidyTableCommand extends BaseMigrateCommand
             }
         }
 
-        if (!$foreign_keys->count() || !$this->containsKey($columns)) {
+        if (! $foreign_keys->count() || ! $this->containsKey($columns)) {
             return false;
         }
 
