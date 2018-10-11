@@ -26,7 +26,7 @@ The table on the right shows how the columns are grouped after running the tidy 
 Via Composer
 
 ``` bash
-$ composer require casperw/laravel-tidy-tables
+$ composer require casperw/laravel-tidy-tables --dev
 ```
 ## Configuration
 The defaults are set in config/laraveltidytables.php. Copy this file to your own config directory to modify the values. You can publish the config using this command:
