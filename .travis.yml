@@ -4,8 +4,37 @@ php:
   - 7.1
   - 7.2
 
+env:
+  global:
+    - setup=stable
+    - laravel=5.x
+    - testbench=3.x
+
+matrix:
+  include:
+    - php: 7.1
+      env: setup=lowest
+    - php: 7.1
+      env:
+        - laravel=5.6.x
+        - testbench=3.6.x
+    - php: 7.1
+      env:
+        - laravel=5.7.x
+        - testbench=3.7.x
+
 sudo: false
 
-install: travis_retry composer install --no-interaction --prefer-source
+cache:
+  directories:
+    - $HOME/.composer/cache
 
-script: vendor/bin/phpunit
+install:
+  - composer require illuminate/support:${laravel} --no-update
+  - composer require laravel/framework:${laravel} --no-update
+  - composer require orchestra/testbench:${testbench} --no-update
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
+
+script:
+  - vendor/bin/phpunit
