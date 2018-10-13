@@ -34,7 +34,7 @@ class TidyTableCommand extends BaseMigrateCommand
     public function handle()
     {
         $tables = $this->getTables();
-        $bar = $this->output->createProgressBar(count($tables));
+//        $bar = $this->output->createProgressBar(count($tables));
 
         $this->prepareDatabase();
 
@@ -47,15 +47,16 @@ class TidyTableCommand extends BaseMigrateCommand
 
             $this->reorderForeignKeys($table_name, $this->getTableColumns($table_name));
 
-            $bar->advance();
+//            $bar->advance();
         }
 
-        $bar->finish();
+//        $bar->finish();
 
         $this->repairDatabase();
 
-        $this->line("\nSorting completed!");
+//        $this->line("\nSorting completed!");
     }
+
 
     private function reorderUuid($table, Collection $columns)
     {
