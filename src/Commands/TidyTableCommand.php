@@ -31,10 +31,9 @@ class TidyTableCommand extends BaseMigrateCommand
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): void
     {
         $tables = $this->getTables();
-//        $bar = $this->output->createProgressBar(count($tables));
 
         $this->prepareDatabase();
 
@@ -47,25 +46,20 @@ class TidyTableCommand extends BaseMigrateCommand
 
             $this->reorderForeignKeys($table_name, $this->getTableColumns($table_name));
 
-//            $bar->advance();
         }
 
-//        $bar->finish();
-
         $this->repairDatabase();
-
-//        $this->line("\nSorting completed!");
     }
 
 
-    private function reorderUuid($table, Collection $columns)
+    private function reorderUuid($table, Collection $columns): bool
     {
         if ($columns->contains(config('laraveltidytables.fields.primary_key')) && $columns->contains(config('laraveltidytables.fields.universally_unique_identifier'))) {
             return $this->moveColumn($table, config('laraveltidytables.fields.universally_unique_identifier'), config('laraveltidytables.data_types.universally_unique_identifier'), config('laraveltidytables.fields.primary_key'));
         }
     }
 
-    private function reorderTimestamps(string $table, Collection $columns)
+    private function reorderTimestamps(string $table, Collection $columns): void
     {
         $last_item = $this->getLastNotTimestampColumn($columns);
 
@@ -76,7 +70,7 @@ class TidyTableCommand extends BaseMigrateCommand
         }
     }
 
-    private function reorderForeignKeys(string $table, Collection $columns)
+    private function reorderForeignKeys(string $table, Collection $columns): bool
     {
         $foreign_keys = collect();
 
@@ -93,5 +87,7 @@ class TidyTableCommand extends BaseMigrateCommand
         foreach ($foreign_keys as $foreign_key) {
             $this->moveKey($table, $foreign_key, config('laraveltidytables.data_types.foreign_keys'), $this->getBaseColumn($columns));
         }
+
+        return true;
     }
 }
