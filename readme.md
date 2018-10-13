@@ -15,7 +15,7 @@ This package provides a way to reorder the columns of all your existing database
 
 ## Example
 
-To give you an example, I've created a 'products' table. You might recognise the situation on the left, where the table became messy and unstructured. 
+For example, I've created a 'products' table. You might recognize the situation on the left, where the table became messy and unstructured. 
 
 The table on the right shows how the columns are grouped after running the tidy command. 
  
@@ -26,7 +26,7 @@ The table on the right shows how the columns are grouped after running the tidy 
 Via Composer
 
 ``` bash
-$ composer require casperw/laravel-tidy-tables
+$ composer require casperw/laravel-tidy-tables --dev
 ```
 ## Configuration
 The defaults are set in config/laraveltidytables.php. Copy this file to your own config directory to modify the values. You can publish the config using this command:
