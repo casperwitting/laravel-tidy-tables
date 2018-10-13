@@ -75,7 +75,7 @@ class TidyTableCommand extends BaseMigrateCommand
         $foreign_keys = collect();
 
         foreach ($columns as $column) {
-            if (str_contains($column, config('laraveltidytables.fields.foreign_key_affix'))) {
+            if (str_contains($column, config('laraveltidytables.fields.foreign_key_suffix'))) {
                 $foreign_keys->push($column);
             }
         }

@@ -15,7 +15,7 @@ return [
     'fields' => [
         'primary_key' => 'id',
         'universally_unique_identifier' => 'uuid',
-        'foreign_key_affix' => '_id',
+        'foreign_key_suffix' => '_id',
         'timestamps' => [
             'deleted_at',
             'updated_at',
