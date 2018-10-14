@@ -1,11 +1,11 @@
 <?php
 
-use Casperw\LaravelTidyTables\Commands\TidyTableCommand;
-use Illuminate\Database\Migrations\Migrator;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use PHPUnit\Framework\TestCase;
+use Illuminate\Database\Migrations\Migrator;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Casperw\LaravelTidyTables\Commands\TidyTableCommand;
 
 class TidyTableCommandTest extends TestCase
 {
@@ -37,15 +37,15 @@ class TidyTableCommandTest extends TestCase
         $this->subject->handle();
 
         $this->assertEquals([
-            0 => "id",
-            1 => "uuid",
-            2 => "acccount_id",
-            3 => "person_id",
-            4 => "title",
-            5 => "body",
-            6 => "created_at",
-            7 => "updated_at",
-            8 => "deleted_at",
+            0 => 'id',
+            1 => 'uuid',
+            2 => 'acccount_id',
+            3 => 'person_id',
+            4 => 'title',
+            5 => 'body',
+            6 => 'created_at',
+            7 => 'updated_at',
+            8 => 'deleted_at',
         ], $this->getTableColumns('tests'));
     }
 
@@ -80,7 +80,7 @@ class TidyTableCommandTest extends TestCase
                     ['text' => 'body'],
                     ['timestamps' => ''],
                     ['softDeletes' => 'deleted_at'],
-                ]
+                ],
             ],
             [
                 [
@@ -92,7 +92,7 @@ class TidyTableCommandTest extends TestCase
                     ['softDeletes' => 'deleted_at'],
                     ['integer' => 'person_id'],
                     ['integer' => 'acccount_id'],
-                ]
+                ],
             ],
             [
                 [
@@ -104,7 +104,7 @@ class TidyTableCommandTest extends TestCase
                     ['integer' => 'acccount_id'],
                     ['text' => 'body'],
                     ['timestamps' => ''],
-                ]
+                ],
             ],
             [
                 [
@@ -116,7 +116,7 @@ class TidyTableCommandTest extends TestCase
                     ['softdeletes' => 'deleted_at'],
                     ['integer' => 'acccount_id'],
                     ['text' => 'body'],
-                ]
+                ],
             ],
             [
                 [
@@ -128,7 +128,7 @@ class TidyTableCommandTest extends TestCase
                     ['uuid' => 'uuid'],
                     ['softdeletes' => 'deleted_at'],
                     ['integer' => 'acccount_id'],
-                ]
+                ],
             ],
             [
                 [
@@ -140,7 +140,7 @@ class TidyTableCommandTest extends TestCase
                     ['timestamps' => ''],
                     ['uuid' => 'uuid'],
                     ['softdeletes' => 'deleted_at'],
-                ]
+                ],
             ],
             [
                 [
@@ -152,7 +152,7 @@ class TidyTableCommandTest extends TestCase
                     ['string' => 'title'],
                     ['text' => 'body'],
                     ['integer' => 'acccount_id'],
-                ]
+                ],
             ],
             [
                 [
@@ -164,7 +164,7 @@ class TidyTableCommandTest extends TestCase
                     ['softdeletes' => 'deleted_at'],
                     ['string' => 'title'],
                     ['text' => 'body'],
-                ]
+                ],
             ],
             [
                 [
@@ -176,7 +176,7 @@ class TidyTableCommandTest extends TestCase
                     ['string' => 'title'],
                     ['text' => 'body'],
                     ['timestamps' => ''],
-                ]
+                ],
             ],
             [
                 [
@@ -188,7 +188,7 @@ class TidyTableCommandTest extends TestCase
                     ['softdeletes' => 'deleted_at'],
                     ['timestamps' => ''],
                     ['uuid' => 'uuid'],
-                ]
+                ],
             ],
         ];
     }

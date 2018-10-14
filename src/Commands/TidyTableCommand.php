@@ -45,12 +45,10 @@ class TidyTableCommand extends BaseMigrateCommand
             $this->reorderTimestamps($table_name, $this->getTableColumns($table_name));
 
             $this->reorderForeignKeys($table_name, $this->getTableColumns($table_name));
-
         }
 
         $this->repairDatabase();
     }
-
 
     private function reorderUuid($table, Collection $columns): bool
     {
