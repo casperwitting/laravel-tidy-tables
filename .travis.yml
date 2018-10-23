@@ -20,7 +20,7 @@ matrix:
     env: COMPOSER_FLAGS="--prefer-lowest"
 
 before_script:
-- cp .env.tests .env
+- cp .env.travis .env
 - mysql -e 'create database tests;'
 - travis_retry composer self-update
 - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
