@@ -24,7 +24,6 @@ before_script:
 - mysql -e 'create database tests;'
 - travis_retry composer self-update
 - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
-- php artisan key:generate
 
 script:
 - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
