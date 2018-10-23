@@ -1,14 +1,27 @@
 language: php
 
 php:
+- 7.0
 - 7.1
 - 7.2
+- 7.3
+- nightly
+
+matrix:
+  allow_failures:
+  - php: nightly
+  include:
+  - php: 7.0
+    env: COMPOSER_FLAGS="--prefer-lowest"
+  - php: 7.1
+    env: COMPOSER_FLAGS="--prefer-lowest"
 
 before_script:
-- cp .env.travis .env
-- mysql -e 'create database homestead_test;'
-- composer self-update
-- composer install --no-interaction
+- cp .env.tests .env
+- mysql -e 'create database tests;'
+- travis_retry composer self-update
+- travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+- php artisan key:generate
 
 script:
-- vendor/bin/phpunit
+- vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
